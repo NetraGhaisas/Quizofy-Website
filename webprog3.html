@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="styles/quizlink.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src ="script/timer.js"></script>
+<script src="script/webprog3.js"></script>
+<script>
+var myVar = setInterval(myTimer, 1000);
+var end = setTimeout(myFunction, 300000);
+var min=0;
+var sec=0;
+
+$(function(){
+            $("#submit").on('click',function() {
+                $(this).hide();
+            }); 
+        });
+</script>
+<title>Quizofy</title>
+</head>
+
+<body>
+<header>
+<h1> Quizofy </h1>
+</header>
+<!--<h2 style="font-family:Verdana;color:SlateBlue;text-align:center;">The Quiz Hub</h2>-->
+
+	<nav>
+		<ul>
+			<li><a href="index.html"><b>Home</b></a></li>
+			<li><a href="about.html"><b>About</b></a></li>
+			<li><a href="topic.html"><b>Topics</b></a></li>
+			<li style="float:right"><a href="https://goo.gl/forms/NyQObKza4ckmmHpo1" target="_blank"><b>Feedback</b></a></li>
+			
+		</ul>
+	</nav>
+	<!--<div class="sidebar">
+		<h1><b>Featured quizzes</b></h1>
+		
+	</div>-->
+	<div class="main">
+		<div class="timer">
+		<p id="time">Time : </p>
+		</div>
+	<h1>Data Structures</h1>
+	<p><i>Answer the questions below then click submit</i> </p>
+	<form id="myForm">
+	<p class="question">1. On what does Queue data structure work?</p>
+	<fieldset id="q1">
+		<input type="radio" name="q1" value="1" id="q1a"><label for="q1a">LIFO</label><br>
+		<input type="radio" name="q1" value="2" id="q1b"><label for="q1b">FIFO</label><br>
+		<input type="radio" name="q1" value="3" id="q1c"><label for="q1c">FILO</label><br>
+		<input type="radio" name="q1" value="4" id="q1d"><label for="q1d">None of these</label><br>
+	</fieldset>
+	<p id="pq1"></p>
+	<br>
+
+	<p class="question">2. Graph traversal is different from a tree traversal, because</p>
+	<fieldset id="q2">
+		<input type="radio" name="q2" value="1" id="q2a"><label for="q2a">Trees are not connected</label><br>
+		<input type="radio" name="q2" value="2" id="q2b"><label for="q2b">Graphs may have loops</label><br>
+		<input type="radio" name="q2" value="3" id="q2c"><label for="q2c">Trees have root</label><br>
+		<input type="radio" name="q2" value="4" id="q2d"><label for="q2d">None is true as tree is a subset of graph</label><br>
+	</fieldset>
+	<p id="pq2"></p><br>
+	
+	<p class="question">3. Which of the below given sorting techniques has highest best-case runtime complexity?</p>
+	<fieldset id="q3">
+		<input type="radio" name="q3" value="1" id="q3a"><label for="q3a">Quick sort</label><br>
+		<input type="radio" name="q3" value="2" id="q3b"><label for="q3b">Selection sort</label><br>
+		<input type="radio" name="q3" value="3" id="q3c"><label for="q3c">Insertion sort</label><br>
+		<input type="radio" name="q3" value="4" id="q3d"><label for="q3d">Bubble sort</label><br>
+	</fieldset>
+	<p id="pq3"></p><br>
+	
+	<p class="question">4. Entries in a stack are “ordered”. What is the meaning of this statement?</p>
+	<fieldset id="q4">
+		<input type="radio" name="q4" value="1" id="q4a"><label for="q4a">A collection of stacks is sortable</label><br>
+		<input type="radio" name="q4" value="2" id="q4b"><label for="q4b">Stack entries may be compared with the ‘<‘ operation</label><br>
+		<input type="radio" name="q4" value="3" id="q4c"><label for="q4c">The entries are stored in a linked list</label><br>
+		<input type="radio" name="q4" value="4" id="q4d"><label for="q4d">There is a Sequential entry that is one by one</label><br>
+	</fieldset>
+	<p id="pq4"></p><br>
+	
+	<p class="question">5. Which of the following is false about a doubly linked list?</p>
+	<fieldset id="q5">
+		<input type="radio" name="q5" value="1" id="q5a"><label for="q5a">We can navigate in both the directions</label><br>
+		<input type="radio" name="q5" value="2" id="q5b"><label for="q5b">It requires more space than a singly linked list</label><br>
+		<input type="radio" name="q5" value="3" id="q5c"><label for="q5c">The insertion and deletion of a node take a bit longer</label><br>
+		<input type="radio" name="q5" value="4" id="q5d"><label for="q5d">None of the mentioned</label><br>
+	</fieldset>
+	<p id="pq5"></p><br>
+	
+	<p class="question">6. What differentiates a circular linked list from a normal linked list?</p>
+	<fieldset id="q6">
+		<input type="radio" name="q6" value="1" id="q6a"><label for="q6a">You cannot have the ‘next’ pointer point to null in a circular linked list</label><br>
+		<input type="radio" name="q6" value="2" id="q6b"><label for="q6b">It is faster to traverse the circular linked list</label><br>
+		<input type="radio" name="q6" value="3" id="q6c"><label for="q6c">You may or may not have the ‘next’ pointer point to null in a circular linked list</label><br>
+		<input type="radio" name="q6" value="4" id="q6d"><label for="q6d">All of the mentioned</label><br>
+	</fieldset>
+	<p id="pq6"></p><br>
+	
+	<p class="question">7. . What is the value of the postfix expression 6 3 2 4 + – * ?</p>
+	<fieldset id="q7">
+		<input type="radio" name="q7" value="1" id="q7a"><label for="q7a">Something between -5 and -15</label><br>
+		<input type="radio" name="q7" value="2" id="q7b"><label for="q7b">Something between 5 and -5</label><br>
+		<input type="radio" name="q7" value="3" id="q7c"><label for="q7c">Something between 5 and 15</label><br>
+		<input type="radio" name="q7" value="4" id="q7d"><label for="q7d">Something between 15 and 100</label><br>
+	</fieldset>
+	<p id="pq7"></p><br>
+	
+	<p class="question">8. What is the functionality of the following piece of code? Select the most appropriate option:
+<pre>public void function(int data)
+{
+	int flag = 0;
+	if( head != null)
+	{
+		Node temp = head.getNext();
+		while((temp != head) && (!(temp.getItem() == data)))
+		{
+			temp = temp.getNext();
+			flag = 1;
+			break;
+		}
+	}
+	if(flag)
+		System.out.println("success");
+	else
+		System.out.println("fail");
+}</pre>
+</p>
+	<fieldset id="q8">
+		<input type="radio" name="q8" value="1" id="q8a"><label for="q8a">Print success if a particular element is not found</label><br>
+		<input type="radio" name="q8" value="2" id="q8b"><label for="q8b">Print fail if a particular element is not found</label><br>
+		<input type="radio" name="q8" value="3" id="q8c"><label for="q8c">Print success if a particular element is equal to 1</label><br>
+		<input type="radio" name="q8" value="4" id="q8d"><label for="q8d">Print fail if the list is empty</label><br>
+	</fieldset>
+	<p id="pq8"></p><br>
+	
+	<p class="question">9. Which of the following application makes use of a circular linked list?</p>
+	<fieldset id="q9">
+		<input type="radio" name="q9" value="1" id="q9a"><label for="q9a">Undo operation in a text editor</label><br>
+		<input type="radio" name="q9" value="2" id="q9b"><label for="q9b">Recursive function calls</label><br>
+		<input type="radio" name="q9" value="3" id="q9c"><label for="q9c">Allocating CPU to resources</label><br>
+		<input type="radio" name="q9" value="4" id="q9d"><label for="q9d">All of the mentioned</label><br>
+	</fieldset>
+	<p id="pq9"></p><br>
+	
+	<p class="question">10. What are the applications of dequeue?</p>
+	<fieldset id="q10">
+		<input type="radio" name="q10" value="1" id="q10a"><label for="q10a">A-Steal job scheduling algorithm</label><br>
+		<input type="radio" name="q10" value="2" id="q10b"><label for="q10b">Can be used as both stack and queue</label><br>
+		<input type="radio" name="q10" value="3" id="q10c"><label for="q10c">To find the maximum of all sub arrays of size k</label><br>
+		<input type="radio" name="q10" value="4" id="q10d"><label for="q10d">All of the mentioned</label><br>
+	</fieldset>
+	<p id="pq10"></p>
+	<br>
+
+	<input type="button" value="Submit" id="submit" onclick="myFunction()">
+	<p style="font-size:20px;background-color:lavender;" id="score"></p>
+	</form>
+	</div>
+
+</body>
+</html>
